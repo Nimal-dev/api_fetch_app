@@ -20,7 +20,7 @@ This project demonstrates:
 
 2. **API Data Screen**
    - Fetches post data from JSONPlaceholder API
-   - Displays data in a scrollable list with nicely formatted cards
+   - Displays data in a scrollable list using ListView with nicely formatted cards
    - Comprehensive error handling with user-friendly error messages
    - Refresh functionality to reload data
    - Loading indicators during data fetching
@@ -44,8 +44,8 @@ This project demonstrates:
 
 1. **Clone the repository**
    ```
-   git clone [repository-url]
-   cd [project-folder]
+   git clone https://github.com/Nimal-dev/api_fetch_app.git
+   cd api_fetch_app
    ```
 
 2. **Install dependencies**
