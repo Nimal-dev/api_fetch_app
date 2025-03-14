@@ -37,7 +37,7 @@ This project demonstrates:
 ### Prerequisites
 - Flutter SDK (2.5.0 or higher)
 - Dart SDK (2.14.0 or higher)
-- Android Studio / VS Code with Flutter extensions
+- Android Studio / VS Code
 - A physical device or emulator for testing
 
 ### Installation Steps
@@ -59,7 +59,7 @@ This project demonstrates:
    dependencies:
      flutter:
        sdk: flutter
-     http: ^[version]  # For API requests
+     http: ^1.3.0  # For API requests
    ```
 
 4. **Run the application**
@@ -77,33 +77,11 @@ lib/
     └── assignmentPage.dart  # API fetching and display screen
 ```
 
-## Additional Enhancements (Future Work)
-
-The following enhancements could be added to extend the functionality:
-
-1. **State Management**
-   - Implement a state management solution like Provider or Bloc for more complex applications
-
-2. **Caching**
-   - Add local storage to cache API responses for offline use
-
-3. **Search and Filter**
-   - Add functionality to search or filter the fetched data
-
-4. **Pagination**
-   - Implement pagination for more efficient loading of large datasets
-
-5. **User Interactions**
-   - Add functionality to interact with posts (like, comment, share)
-
-6. **Authentication**
-   - Add user authentication for personalized content
-
 ## Assumptions Made
 
 - Internet connectivity is required for the application to function properly
 - The API endpoint is stable and returns data in the expected format
-- The application is designed for portrait mode on mobile devices
+<!-- - The application is designed for portrait mode on mobile devices -->
 - The API doesn't require authentication for accessing data
 
 ## Credits
