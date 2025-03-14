@@ -26,7 +26,7 @@ class _AssignmentPageState extends State<AssignmentPage> {
     });
     try {
       print("API Fetching Started");
-      const url = "https://jsonplaceholder.typicode.com/post"; // Corrected API URL
+      const url = "https://jsonplaceholder.typicode.com/posts"; // Corrected API URL
       final uri = Uri.parse(url); // Parsing string URL to Uri object
       final response = await http.get(uri); // Makes GET request to API
 
