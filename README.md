@@ -11,6 +11,27 @@ This project demonstrates:
 - Responsive UI with Material Design elements
 - Navigation between screens
 
+## Screenshots
+
+### Home Screen
+![Home Screen](/screenshots/page1.jpg)
+*Welcome screen with gradient background and app information*
+
+### API Data Screen
+![API Data Screen](/screenshots/page2.jpg)
+*Screen displaying fetched data in a card-based list view*
+
+### Error Handling
+![Error Screen](/screenshots/internet_error.jpg)
+*Error handling UI when network issues occur*
+
+![Error Screen](/screenshots/api_error.jpg)
+*Error handling UI when api issues occur*
+
+### Loading State
+![Loading Screen](/screenshots/loading_screen.jpg)
+*Loading indicator while data is being fetched*
+
 ## Features Implemented
 
 1. **Home Screen**
@@ -81,7 +102,6 @@ lib/
 
 - Internet connectivity is required for the application to function properly
 - The API endpoint is stable and returns data in the expected format
-<!-- - The application is designed for portrait mode on mobile devices -->
 - The API doesn't require authentication for accessing data
 
 ## Credits
