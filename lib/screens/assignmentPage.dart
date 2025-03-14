@@ -26,7 +26,7 @@ class _AssignmentPageState extends State<AssignmentPage> {
     });
     try {
       print("API Fetching Started");
-      const url = "https://jsonplaceholder.typicode.com/posts"; // API endpoint URL
+      const url = "https://jsonplaceholder.typicode.com/post"; // Corrected API URL
       final uri = Uri.parse(url); // Parsing string URL to Uri object
       final response = await http.get(uri); // Makes GET request to API
 
@@ -38,13 +38,25 @@ class _AssignmentPageState extends State<AssignmentPage> {
         });
         print('Data Fetched Successfully');
       } else {
+        // Detailed error messages based on the status code
+        String message;
+        if (response.statusCode == 400) {
+          message = "Bad Request : ${response.statusCode} - The server could not understand your request.";
+        } else if (response.statusCode == 404) {
+          message = "Error ${response.statusCode} - The requested resource could not be found.";
+        } else if (response.statusCode == 500) {
+          message = "Internal Server Error : ${response.statusCode} - Please try again later.";
+        } else {
+          message = "Failed to load data. Error code: ${response.statusCode}";
+        }
+
         setState(() {
-          errorMessage = "Failed to load data: ${response.statusCode}"; // Store error with status code
+          errorMessage = message; // Stores error with detailed message
         });
       }
     } catch (e) {
       setState(() {
-        errorMessage = "An error occurred while fetching data. Please check your internet connection."; // Handle network or other errors
+        errorMessage = "An error occurred while fetching data. Please check your internet connection."; // Handle network and other errors
       });
     }
   }
@@ -74,7 +86,7 @@ class _AssignmentPageState extends State<AssignmentPage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.error, color: Colors.red, size: 50), // Error icon
+                    const Icon(Icons.error, color: Colors.red, size: 50), // Error icon
                     const SizedBox(height: 10),
                     Text(
                       errorMessage!,

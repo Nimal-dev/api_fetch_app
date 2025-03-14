@@ -1,6 +1,6 @@
 # API Fetching Flutter Application
 
-A simple Flutter application that demonstrates fetching and displaying data from a REST API. The application showcases proper API integration with error handling and a clean, responsive UI.
+A simple Flutter application that demonstrates fetching and displaying data API. The application showcases proper API integration with error handling and a clean, responsive UI.
 
 ## Project Overview
 
